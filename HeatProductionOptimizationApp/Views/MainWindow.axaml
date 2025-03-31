@@ -15,6 +15,19 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Canvas Height="800" Width="450">
+        <Canvas Height="45" Width="450" Top="0" Left="0" Background="Red">
+        <TextBlock/>
+        <Image/>
+        <Canvas/>
+        <Canvas Height="100" Width="100" Top="45" Left="0" Background="Red"/>
+        <Button/>
+        <Button/>
+        <Button/>
+
+        <Canvas/>
+
+    <Canvas/>
+
 
 </Window>
