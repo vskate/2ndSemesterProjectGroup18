@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XITwUH5qopM=",
+  "dgSpecHash": "/DbH6XfMQaw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\cunin\\OneDrive\\Desktop\\School\\Semester 2\\Semester Project\\2ndSemesterProjectGroup18\\HeatProductionOptimizationApp\\HeatProductionOptimizationApp.csproj",
+  "projectFilePath": "C:\\Users\\cunin\\OneDrive\\Desktop\\School\\Semester2\\SemesterProject\\2ndSemesterProjectGroup18\\HeatProductionOptimizationApp\\HeatProductionOptimizationApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cunin\\.nuget\\packages\\avalonia\\11.2.1\\avalonia.11.2.1.nupkg.sha512",
     "C:\\Users\\cunin\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.22045.20230930\\avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",
