@@ -1,0 +1,49 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  
+  <Design.PreviewWith>
+    <Border Padding="20">
+      <!-- Add Controls for Previewer Here -->
+    </Border>
+  </Design.PreviewWith> 
+
+
+  <Style Selector="DockPanel.menu">
+    <Setter Property="Background" Value="#EE1C24" />
+  </Style>
+
+  <Style Selector="TextBlock">
+    <Setter Property="FontFamily" Value="MyriadPro" />
+    <Setter Property="FontSize" Value="16" />
+    <Setter Property="Foreground" Value="black" />
+  </Style>
+  <Style Selector="Button">
+    <Setter Property="FontFamily" Value="MyriadPro" />
+    <Setter Property="FontSize" Value="16" />
+    <Setter Property="FontWeight" Value="DemiBold" />
+    <Setter Property="Foreground" Value="black" />
+    <Setter Property="Background" Value="white" />
+    <Setter Property="Width" Value="113" />
+    <Setter Property="Height" Value="43" />
+    <Setter Property="Margin" Value="0,9,0,7"/>
+    <Setter Property="CornerRadius" Value="17" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+  </Style>
+  <Style Selector="Button:hover">
+    <Setter Property="Background" Value="#F68E92" />
+    <Setter Property="Foreground" Value="black" />
+    <Setter Property="FontWeight" Value="Bold" />
+  </Style>
+
+  <Style Selector="Button:pressed">
+    <Setter Property="Background" Value="#DC787D" />
+    <Setter Property="Foreground" Value="black" />
+
+  </Style>
+  <Style Selector="Button.menuButton">
+    <Setter Property="HorizontalAlignment" Value="Center" />
+    <Setter Property="VerticalAlignment" Value="Top" />
+  </Style>
+
+</Styles>
