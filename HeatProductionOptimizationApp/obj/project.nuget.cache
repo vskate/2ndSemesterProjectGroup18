@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/DbH6XfMQaw=",
+  "dgSpecHash": "yBwBYYCOMkI=",
   "success": true,
   "projectFilePath": "C:\\Users\\cunin\\OneDrive\\Desktop\\School\\Semester2\\SemesterProject\\2ndSemesterProjectGroup18\\HeatProductionOptimizationApp\\HeatProductionOptimizationApp.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\cunin\\.nuget\\packages\\avalonia.win32\\11.2.1\\avalonia.win32.11.2.1.nupkg.sha512",
     "C:\\Users\\cunin\\.nuget\\packages\\avalonia.x11\\11.2.1\\avalonia.x11.11.2.1.nupkg.sha512",
     "C:\\Users\\cunin\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.1\\communitytoolkit.mvvm.8.2.1.nupkg.sha512",
+    "C:\\Users\\cunin\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512",
     "C:\\Users\\cunin\\.nuget\\packages\\harfbuzzsharp\\7.3.0.2\\harfbuzzsharp.7.3.0.2.nupkg.sha512",
     "C:\\Users\\cunin\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\7.3.0.2\\harfbuzzsharp.nativeassets.linux.7.3.0.2.nupkg.sha512",
     "C:\\Users\\cunin\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\7.3.0.2\\harfbuzzsharp.nativeassets.macos.7.3.0.2.nupkg.sha512",
