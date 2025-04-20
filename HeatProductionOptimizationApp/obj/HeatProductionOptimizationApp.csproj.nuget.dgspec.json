@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cunin\\OneDrive\\Desktop\\School\\Semester2\\SemesterProject\\2ndSemesterProjectGroup18\\HeatProductionOptimizationApp\\HeatProductionOptimizationApp.csproj": {}
+    "/Users/nagydorina/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cunin\\OneDrive\\Desktop\\School\\Semester2\\SemesterProject\\2ndSemesterProjectGroup18\\HeatProductionOptimizationApp\\HeatProductionOptimizationApp.csproj": {
+    "/Users/nagydorina/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cunin\\OneDrive\\Desktop\\School\\Semester2\\SemesterProject\\2ndSemesterProjectGroup18\\HeatProductionOptimizationApp\\HeatProductionOptimizationApp.csproj",
+        "projectUniqueName": "/Users/nagydorina/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj",
         "projectName": "HeatProductionOptimizationApp",
-        "projectPath": "C:\\Users\\cunin\\OneDrive\\Desktop\\School\\Semester2\\SemesterProject\\2ndSemesterProjectGroup18\\HeatProductionOptimizationApp\\HeatProductionOptimizationApp.csproj",
-        "packagesPath": "C:\\Users\\cunin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cunin\\OneDrive\\Desktop\\School\\Semester2\\SemesterProject\\2ndSemesterProjectGroup18\\HeatProductionOptimizationApp\\obj\\",
+        "projectPath": "/Users/nagydorina/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj",
+        "packagesPath": "/Users/nagydorina/.nuget/packages/",
+        "outputPath": "/Users/nagydorina/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cunin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/nagydorina/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -11,8 +11,15 @@
         Title="HeatProductionOptimizationApp">
 
     <Design.DataContext>
-        <vm:MainWindowViewModel/>
+        <vm:MainWindowViewModel />
     </Design.DataContext>
 
-    <views:AssetManager />
+    <StackPanel Margin="10">
+        <!-- Your existing component -->
+        <views:AssetManager />
+
+        <!-- NEW: DataGrid to show HeatData -->
+        <DataGrid ItemsSource="{Binding HeatData}" AutoGenerateColumns="True"
+                  Height="300" Margin="0,20,0,0" />
+    </StackPanel>
 </Window>
