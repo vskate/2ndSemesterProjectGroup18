@@ -14,6 +14,10 @@
             <StyleInclude Source="Styles.axaml"/>
         </Window.Styles>
 
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
 
     <Grid>
         <Grid.RowDefinitions>
@@ -43,5 +47,15 @@
             <TextBlock Margin="10" FontSize="18" FontWeight="Bold">Main Content</TextBlock>
         </DockPanel>
     </Grid>
+
+<!--
+    <StackPanel Margin="10">
+        <! Your existing component ->
+        <views:AssetManager />
+
+        <!- NEW: DataGrid to show HeatData ->
+        <DataGrid ItemsSource="{Binding HeatData}" AutoGenerateColumns="True"
+                  Height="300" Margin="0,20,0,0" />
+    </StackPanel> -->
 </Window>
 
