@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using HeatProductionOptimizationApp.Models;
 
 namespace HeatProductionOptimizationApp.ViewModels;
 
 public partial class AssetManagerViewModel : ViewModelBase
 {
-    public List<ProductionUnit> Units => AssetManager.ProductionUnits;
+    private readonly AssetManager _assetManager = new AssetManager();
+
+    public List<ProductionUnit> Units => _assetManager.GetAllUnits();
 }
