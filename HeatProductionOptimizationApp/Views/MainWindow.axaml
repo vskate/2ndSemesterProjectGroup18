@@ -7,19 +7,55 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="HeatProductionOptimizationApp.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/Assets/logoicon.png"
         Title="HeatProductionOptimizationApp">
+
+        <Window.Styles>
+            <StyleInclude Source="Styles.axaml"/>
+        </Window.Styles>
 
     <Design.DataContext>
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130*"/>  
+            <ColumnDefinition Width="670*"/> 
+        </Grid.ColumnDefinitions>
+
+        <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Classes="menu">
+            <TextBlock VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="14,0,14,0">Heat Production Optimization</TextBlock>
+            <Image Source="/Assets/danfoss-BlackLogo.png"  Height="50" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="14,0,14,0"/>
+        </DockPanel>
+
+        <!-- Main content DockPanel -->
+        <DockPanel Grid.Row="1" Grid.Column="0" Classes="menu">
+            <StackPanel Orientation="Vertical">
+                <Button Content="Home" Classes="menuButton"/>
+                <Button Content="Scenario 1" Classes="menuButton"/>
+                <Button Content="Scenario 2" Classes="menuButton"/>
+            </StackPanel>
+        </DockPanel>
+        <DockPanel Grid.Row="1" Grid.Column="1" Background="white">
+            <TextBlock Margin="10" FontSize="18" FontWeight="Bold">Main Content</TextBlock>
+        </DockPanel>
+    </Grid>
+
+<!--
     <StackPanel Margin="10">
-        <!-- Your existing component -->
+        <! Your existing component ->
         <views:AssetManager />
 
-        <!-- NEW: DataGrid to show HeatData -->
+        <!- NEW: DataGrid to show HeatData ->
         <DataGrid ItemsSource="{Binding HeatData}" AutoGenerateColumns="True"
                   Height="300" Margin="0,20,0,0" />
-    </StackPanel>
+    </StackPanel> -->
 </Window>
+

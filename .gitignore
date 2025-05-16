@@ -38,6 +38,7 @@ logs/
 *.pdb
 *.tlog
 *.idb
+*.cache
 
 # macOS files
 .DS_Store
