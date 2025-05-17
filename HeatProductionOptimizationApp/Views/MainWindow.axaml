@@ -38,13 +38,13 @@
         <!-- Main content DockPanel -->
         <DockPanel Grid.Row="1" Grid.Column="0" Classes="menu">
             <StackPanel Orientation="Vertical">
-                <Button Content="Home" Classes="menuButton"/>
-                <Button Content="Scenario 1" Classes="menuButton"/>
-                <Button Content="Scenario 2" Classes="menuButton"/>
+                <Button Content="Home" Classes="menuButton" Command="{Binding NavigateToHome}" />
+                <Button Content="Scenario 1" Classes="menuButton" Command="{Binding NavigateToScenario1}" />
+                <Button Content="Scenario 2" Classes="menuButton" Command="{Binding NavigateToScenario2}" />
             </StackPanel>
         </DockPanel>
         <DockPanel Grid.Row="1" Grid.Column="1" Background="white">
-            <TextBlock Margin="10" FontSize="18" FontWeight="Bold">Main Content</TextBlock>
+            <ContentControl Content="{Binding CurrentView}" />
         </DockPanel>
     </Grid>
 

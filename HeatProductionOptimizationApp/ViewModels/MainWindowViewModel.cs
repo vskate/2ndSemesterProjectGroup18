@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using HeatProductionOptimizationApp.Models;
+using HeatProductionOptimizationApp.Views; // Add this line
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Avalonia.Controls;
 
 namespace HeatProductionOptimizationApp.ViewModels;
 
@@ -11,6 +15,19 @@ public partial class MainWindowViewModel : ViewModelBase
 
     // Holds the loaded CSV data
     public List<HeatDataEntry> HeatData { get; }
+
+    [ObservableProperty]
+    private UserControl currentView;
+    private Stack<UserControl> _BackViewStack = new Stack<UserControl>();
+
+    [ObservableProperty]
+    private bool isPaneOpen = false;
+
+    private HomeView _homeView = new HomeView { DataContext = new HomeViewModel() };
+    private Scenario1View _scenario1View = new Scenario1View { DataContext = new Scenario1ViewModel() };
+    private Scenario2View _scenario2View = new Scenario2View { DataContext = new Scenario2ViewModel() };
+
+
 
     // Constructor
     public MainWindowViewModel()
@@ -36,5 +53,29 @@ public partial class MainWindowViewModel : ViewModelBase
             Console.WriteLine("❌ Could not find HeatData.csv");
             HeatData = new List<HeatDataEntry>();
         }
+       
+        CurrentView = _homeView;
+}
+    
+    [RelayCommand]
+    public void NavigateToHome()
+    {
+        CurrentView = _homeView;
+        _BackViewStack.Push(CurrentView);
+        
+    }
+
+    [RelayCommand]
+    public void NavigateToScenario1()
+    {
+        _BackViewStack.Push(CurrentView);
+        CurrentView = _scenario1View;
+    }
+
+    [RelayCommand]
+    public void NavigateToScenario2()
+    {
+        _BackViewStack.Push(CurrentView);
+        CurrentView = _scenario2View;
     }
 }
