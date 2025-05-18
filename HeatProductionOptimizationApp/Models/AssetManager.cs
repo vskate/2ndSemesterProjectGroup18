@@ -4,44 +4,89 @@ using System.Linq;
 
 namespace HeatProductionOptimizationApp.Models
 {
-    // This manages a list of production units and heating areas
+    // Handles all the units and heating areas we're working with
     public class AssetManager
     {
         private readonly List<ProductionUnit> _productionUnits = new();
         private readonly List<HeatingArea> _heatingAreas = new();
 
-        // Add a production unit
+        // Add a new unit to the list
         public void AddUnit(ProductionUnit unit)
         {
             _productionUnits.Add(unit);
         }
 
-        // Get all production units
+        // Get a copy of all units (so the list can't be messed with directly)
         public List<ProductionUnit> GetAllUnits()
         {
-            return _productionUnits.ToList(); // return a copy for safety
+            return _productionUnits.ToList();
         }
 
-        // Find a unit by name
+        // Find a unit by its name (useful for quick access)
         public ProductionUnit? FindUnitByName(string name)
         {
             return _productionUnits.FirstOrDefault(u => u.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
         }
 
-        // Add a heating area
+        // Add a new heating area to the list
         public void AddHeatingArea(HeatingArea area)
         {
             _heatingAreas.Add(area);
         }
 
-        // Get all heating areas
+        // Same as units, just returns a copy of heating areas
         public List<HeatingArea> GetAllHeatingAreas()
         {
             return _heatingAreas.ToList();
         }
+
+        // Set up the units we need for Scenario 2
+        public void InitializeScenario2Units()
+        {
+            // Basic heat-only boilers
+            AddUnit(new ProductionUnit
+            {
+                Name = "Gas Boiler",
+                MaxHeatOutput = 5,
+                MinHeatOutput = 0,
+                Efficiency = 0.9,
+                CostPerMWh = 25
+            });
+
+            AddUnit(new ProductionUnit
+            {
+                Name = "Oil Boiler",
+                MaxHeatOutput = 4,
+                MinHeatOutput = 0,
+                Efficiency = 0.8,
+                CostPerMWh = 40
+            });
+
+            // Gas motor: makes electricity while producing heat
+            AddUnit(new ProductionUnit
+            {
+                Name = "Gas Motor",
+                MaxHeatOutput = 5,
+                MinHeatOutput = 0,
+                Efficiency = 0.85,
+                ElectricityOutput = 3,  // makes 3 MWh electricity
+                CostPerMWh = 35
+            });
+
+            // Heat pump: uses electricity to make heat
+            AddUnit(new ProductionUnit
+            {
+                Name = "Heat Pump",
+                MaxHeatOutput = 4,
+                MinHeatOutput = 0,
+                Efficiency = 1.0,
+                ElectricityOutput = -4, // needs 4 MWh electricity
+                CostPerMWh = 20
+            });
+        }
     }
 
-    // Represents one heating area
+    // Just holds basic info about a heating area
     public class HeatingArea
     {
         public string Architecture { get; set; }
@@ -55,4 +100,4 @@ namespace HeatProductionOptimizationApp.Models
             CityName = cityName;
         }
     }
-} // ✅ FINAL CLOSING BRACE for namespace!
+}

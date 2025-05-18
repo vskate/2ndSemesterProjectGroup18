@@ -1474,19 +1474,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/nagydorina/.nuget/packages/": {}
+    "/Users/dodo/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nagydorina/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj",
+      "projectUniqueName": "/Users/dodo/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj",
       "projectName": "HeatProductionOptimizationApp",
-      "projectPath": "/Users/nagydorina/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj",
-      "packagesPath": "/Users/nagydorina/.nuget/packages/",
-      "outputPath": "/Users/nagydorina/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/obj/",
+      "projectPath": "/Users/dodo/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj",
+      "packagesPath": "/Users/dodo/.nuget/packages/",
+      "outputPath": "/Users/dodo/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/nagydorina/.nuget/NuGet/NuGet.Config"
+        "/Users/dodo/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -1557,7 +1557,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
