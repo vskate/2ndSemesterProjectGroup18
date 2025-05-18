@@ -2,9 +2,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:lvc="using:LiveChartsCore.SkiaSharpView.Avalonia"
+             xmlns:vms="using:ViewModelsSamples.StackedArea.Basic"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
               xmlns:vm="using:HeatProductionOptimizationApp.ViewModels"
               x:DataType="vm:Scenario2ViewModel"
              x:Class="HeatProductionOptimizationApp.Views.Scenario2View">
-  Welcome to Scenario 2!
+  
+  <UserControl.Styles>
+    <StyleInclude Source="Styles.axaml"/>
+  </UserControl.Styles>
+  <UserControl.DataContext>
+    <vm:Scenario2ViewModel />
+  </UserControl.DataContext>
+
+  <Grid Margin="19,19,19,5"
+      RowDefinitions="Auto,Auto,*,Auto"
+      ColumnDefinitions="*"
+      VerticalAlignment="Stretch">
+
+  <!-- Title -->
+  <TextBlock Grid.Row="0"
+             Text="Scenario 1"
+             Classes="Heading" />
+
+  <!-- Description -->
+  <TextBlock Grid.Row="1"
+             Text="List of production units:"
+             Classes="NormalText"/>
+
+  <!-- Row with 2 Columns -->
+  <Grid Grid.Row="2"
+        ColumnDefinitions="Auto,*">
+    
+    <!-- Column 1 -->
+    <StackPanel Grid.Column="0">
+      <Button Content="Gas Boiler" Classes="UnitButton" />
+      <Button Content="Oil Boiler" Classes="UnitButton" />
+      <Button Content="Gas Motor" Classes="UnitButton" />
+      <Button Content="Heat Pump" Classes="UnitButton" />
+
+
+    </StackPanel>
+
+    <!-- Column 2: Placeholder content -->
+    <StackPanel Grid.Column="1" Margin="10 0 0 0">
+      <ComboBox ItemsSource="{Binding Seasons}" 
+              SelectedItem="{Binding SelectedSeason, Mode=TwoWay}" 
+              PlaceholderText="Pick a season" />
+              <lvc:CartesianChart Series="{Binding CurrentSeries}" Height="250" />
+    </StackPanel>
+  </Grid>
+
+  <!-- Bottom Sticky Footer -->
+  <TextBlock Grid.Row="3"
+             Classes="CreditsText"/>
+</Grid>
+
 </UserControl>

@@ -6,5 +6,45 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:DataType="vm:HomeViewModel"
              x:Class="HeatProductionOptimizationApp.Views.HomeView">
-  Welcome to Avalonia!
+
+  <UserControl.Styles>
+    <StyleInclude Source="Styles.axaml"/>
+  </UserControl.Styles>
+  <UserControl.DataContext>
+    <vm:HomeViewModel />
+  </UserControl.DataContext>
+
+
+
+    <Grid Margin="19,19,19,5"
+      RowDefinitions="Auto,Auto,Auto,*,Auto"
+      HorizontalAlignment="Left">
+
+  <!-- Title -->
+  <TextBlock Grid.Row="0"
+             Text="Headington"
+             Classes="Heading" />
+
+  <!-- Description -->
+  <TextBlock Grid.Row="1"
+             Text="Description: A city with a size of 1600 buildings. This application is used to optimize the heat production in the city. The optimization is done by using a genetic algorithm for 2 Scenarios. The application is developed in Avalonia and C#. "
+             Classes="NormalText"/>
+
+  <!-- Image -->
+  <Image Grid.Row="2"
+         Source="/Assets/CityMap.png"
+         Width="600"
+         Height="300"
+         Stretch="Uniform"
+         Margin="16" />
+
+        <!-- Spacer (takes all remaining space) -->
+  <Panel Grid.Row="3"/>
+
+<!-- Credits -->
+  <TextBlock Grid.Row="4"
+              Classes="CreditsText"/>
+
+</Grid>
+    
 </UserControl>

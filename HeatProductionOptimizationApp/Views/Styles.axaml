@@ -12,11 +12,39 @@
     <Setter Property="Background" Value="#EE1C24" />
   </Style>
 
+  <!-- Text styles -->
   <Style Selector="TextBlock">
     <Setter Property="FontFamily" Value="MyriadPro" />
     <Setter Property="FontSize" Value="16" />
     <Setter Property="Foreground" Value="black" />
   </Style>
+
+  <Style Selector="TextBlock.NormalText">
+    <Setter Property="FontFamily" Value="MyriadPro" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="Foreground" Value="black" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+  </Style>
+
+  <Style Selector="TextBlock.Heading">
+    <Setter Property="FontFamily" Value="MyriadPro" />
+    <Setter Property="FontSize" Value="16" />
+    <Setter Property="FontWeight" Value="Bold" />
+    <Setter Property="Foreground" Value="black" />
+  </Style>
+
+
+  <Style Selector="TextBlock.CreditsText">
+    <Setter Property="FontFamily" Value="MyriadPro" />
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="Foreground" Value="Gainsboro" />
+    <Setter Property="FontStyle" Value="Italic" />
+    <Setter Property="TextWrapping" Value="Wrap" />
+    <Setter Property="Text" Value="Credits: This application is developed as a semester project by Group 18. The data used in this application is based on real-world data." />
+    
+  </Style>
+  
+  <!-- Button styles -->
   <Style Selector="Button">
     <Setter Property="FontFamily" Value="MyriadPro" />
     <Setter Property="FontSize" Value="16" />
@@ -30,7 +58,7 @@
     <Setter Property="HorizontalContentAlignment" Value="Center" />
     <Setter Property="VerticalContentAlignment" Value="Center" />
   </Style>
-  <Style Selector="Button:hover">
+  <Style Selector="Button:pointerover">
     <Setter Property="Background" Value="#F68E92" />
     <Setter Property="Foreground" Value="black" />
     <Setter Property="FontWeight" Value="Bold" />
@@ -45,5 +73,26 @@
     <Setter Property="HorizontalAlignment" Value="Center" />
     <Setter Property="VerticalAlignment" Value="Top" />
   </Style>
+
+  <Style Selector="Button.UnitButton">
+    <Setter Property="HorizontalAlignment" Value="Left" />
+    <Setter Property="VerticalAlignment" Value="Top" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="BorderBrush" Value="Black" />
+  </Style>
+
+  <!-- Combobox styles-->
+  <Style Selector="ComboBox">
+    <Setter Property="FontFamily" Value="MyriadPro" />
+    <Setter Property="FontSize" Value="16" />
+    <Setter Property="Foreground" Value="black" />
+    <Setter Property="Background" Value="white" />
+    <Setter Property="Height" Value="43" />
+    <Setter Property="Width" Value="145" />
+    <Setter Property="Margin" Value="0,9,0,7"/>
+    <Setter Property="CornerRadius" Value="17" />
+  </Style>
+  
+    
 
 </Styles>

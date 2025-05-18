@@ -43,7 +43,7 @@
                 <Button Content="Scenario 2" Classes="menuButton" Command="{Binding NavigateToScenario2}" />
             </StackPanel>
         </DockPanel>
-        <DockPanel Grid.Row="1" Grid.Column="1" Background="white">
+        <DockPanel Grid.Row="1" Grid.Column="1" >
             <ContentControl Content="{Binding CurrentView}" />
         </DockPanel>
     </Grid>
