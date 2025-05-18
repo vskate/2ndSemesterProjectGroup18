@@ -10,7 +10,7 @@ namespace HeatProductionOptimizationApp.Models
 
         public Optimizer()
         {
-            // optional: clean up this part later since we use Scenario 2 units externally now
+            // optional: you can remove this if units are initialized elsewhere
         }
 
         public List<ProductionUnit> GetProductionUnits()
@@ -27,20 +27,18 @@ namespace HeatProductionOptimizationApp.Models
             return units.OrderByDescending(u => u.Efficiency).FirstOrDefault();
         }
 
-        // 🔥 Scenario 2: Optimize using net cost per unit per hour
         public void OptimizeScenario2(
             List<ProductionUnit> units,
             List<HeatDataEntry> heatDemand,
             Dictionary<DateTime, double> electricityPrices)
         {
+            var results = new List<OptimizationResultEntry>();
             var netCosts = CostCalculator.GetNetProductionCosts(units, electricityPrices);
 
             foreach (var demandEntry in heatDemand)
             {
                 var hour = demandEntry.TimeFrom;
                 var requiredHeat = demandEntry.HeatDemand;
-
-                Console.WriteLine($"\n🕒 {hour:yyyy-MM-dd HH:mm} — Need {requiredHeat} MWh of heat");
 
                 var sortedUnits = units.OrderBy(u => netCosts[u.Name][hour]).ToList();
 
@@ -54,16 +52,24 @@ namespace HeatProductionOptimizationApp.Models
                     requiredHeat -= used;
 
                     var costPerMWh = netCosts[unit.Name][hour];
-                    var totalCost = used * costPerMWh;
 
-                    Console.WriteLine($"   🔧 {unit.Name} → {used} MWh @ {costPerMWh:F2} €/MWh = {totalCost:F2} €");
+                    results.Add(new OptimizationResultEntry
+                    {
+                        Timestamp = hour,
+                        UnitName = unit.Name,
+                        HeatProduced = used,
+                        CostPerMWh = costPerMWh
+                    });
                 }
 
                 if (requiredHeat > 0)
                 {
-                    Console.WriteLine($"   ⚠️ WARNING: {requiredHeat} MWh not covered!");
+                    Console.WriteLine($"⚠️ {requiredHeat} MWh not covered at {hour}");
                 }
             }
+
+            ResultDataManager.SaveResultsToCsv(results, "TestApp/output/scenario2_results.csv");
+            Console.WriteLine("\n✅ Results saved to TestApp/output/scenario2_results.csv");
         }
     }
 }
