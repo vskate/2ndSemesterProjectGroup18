@@ -53,12 +53,18 @@ namespace HeatProductionOptimizationApp.Models
 
                     var costPerMWh = netCosts[unit.Name][hour];
 
+                    // 📝 Create and store result for this unit in this hour
                     results.Add(new OptimizationResultEntry
                     {
                         Timestamp = hour,
                         UnitName = unit.Name,
                         HeatProduced = used,
-                        CostPerMWh = costPerMWh
+                        CostPerMWh = costPerMWh,
+
+                        // NEW: populate extra values
+                        Electricity = unit.ElectricityOutput * used,           // total electricity produced/used
+                        CO2 = unit.CO2PerMWh * used,                           // total CO2 emitted
+                        PrimaryEnergy = unit.PrimaryEnergyPerMWh * used        // total fuel used
                     });
                 }
 
