@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/nagydorina/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj": {}
+    "/Users/dodo/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj": {}
   },
   "projects": {
-    "/Users/nagydorina/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj": {
+    "/Users/dodo/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/nagydorina/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj",
+        "projectUniqueName": "/Users/dodo/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj",
         "projectName": "HeatProductionOptimizationApp",
-        "projectPath": "/Users/nagydorina/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj",
-        "packagesPath": "/Users/nagydorina/.nuget/packages/",
-        "outputPath": "/Users/nagydorina/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/obj/",
+        "projectPath": "/Users/dodo/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj",
+        "packagesPath": "/Users/dodo/.nuget/packages/",
+        "outputPath": "/Users/dodo/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/nagydorina/.nuget/NuGet/NuGet.Config"
+          "/Users/dodo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -46,27 +46,39 @@
           "dependencies": {
             "Avalonia": {
               "target": "Package",
-              "version": "[11.2.1, )"
+              "version": "[11.3.0, )"
             },
             "Avalonia.Desktop": {
               "target": "Package",
-              "version": "[11.2.1, )"
+              "version": "[11.3.0, )"
             },
             "Avalonia.Diagnostics": {
               "target": "Package",
-              "version": "[11.2.1, )"
+              "version": "[11.3.0, )"
             },
             "Avalonia.Fonts.Inter": {
               "target": "Package",
-              "version": "[11.2.1, )"
+              "version": "[11.3.0, )"
+            },
+            "Avalonia.ReactiveUI": {
+              "target": "Package",
+              "version": "[11.3.0, )"
             },
             "Avalonia.Themes.Fluent": {
               "target": "Package",
-              "version": "[11.2.1, )"
+              "version": "[11.3.0, )"
             },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
-              "version": "[8.2.1, )"
+              "version": "[8.4.0, )"
+            },
+            "LiveChartsCore.SkiaSharpView.Avalonia": {
+              "target": "Package",
+              "version": "[2.0.0-rc5.4, )"
+            },
+            "SkiaSharp": {
+              "target": "Package",
+              "version": "[3.119.0, )"
             }
           },
           "imports": [
@@ -85,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

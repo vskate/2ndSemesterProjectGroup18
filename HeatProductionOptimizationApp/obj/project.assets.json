@@ -1947,19 +1947,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cunin\\.nuget\\packages\\": {}
+    "/Users/dodo/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cunin\\OneDrive\\Desktop\\School\\Semester2\\SemesterProject\\2ndSemesterProjectGroup18\\HeatProductionOptimizationApp\\HeatProductionOptimizationApp.csproj",
+      "projectUniqueName": "/Users/dodo/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj",
       "projectName": "HeatProductionOptimizationApp",
-      "projectPath": "C:\\Users\\cunin\\OneDrive\\Desktop\\School\\Semester2\\SemesterProject\\2ndSemesterProjectGroup18\\HeatProductionOptimizationApp\\HeatProductionOptimizationApp.csproj",
-      "packagesPath": "C:\\Users\\cunin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cunin\\OneDrive\\Desktop\\School\\Semester2\\SemesterProject\\2ndSemesterProjectGroup18\\HeatProductionOptimizationApp\\obj\\",
+      "projectPath": "/Users/dodo/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/HeatProductionOptimizationApp.csproj",
+      "packagesPath": "/Users/dodo/.nuget/packages/",
+      "outputPath": "/Users/dodo/Library/Mobile Documents/com~apple~CloudDocs/personal/SDU/semester-project/2ndSemesterProjectGroup18/HeatProductionOptimizationApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\cunin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/dodo/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -2042,7 +2042,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

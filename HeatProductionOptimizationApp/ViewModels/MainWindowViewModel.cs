@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using HeatProductionOptimizationApp.Models;
 using HeatProductionOptimizationApp.Views; // Add this line
+using HeatProductionOptimizationApp.ViewModels;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Avalonia.Controls;
@@ -25,7 +26,10 @@ public partial class MainWindowViewModel : ViewModelBase
 
     private HomeView _homeView = new HomeView { DataContext = new HomeViewModel() };
     private Scenario1View _scenario1View = new Scenario1View { DataContext = new Scenario1ViewModel() };
-    private Scenario2View _scenario2View = new Scenario2View { DataContext = new Scenario2ViewModel() };
+    private ResultDataManagerView _scenario2View = new ResultDataManagerView
+    {
+        DataContext = new ResultDataManagerViewModel()
+    };
 
 
 
