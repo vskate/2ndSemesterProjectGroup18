@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
@@ -13,8 +13,7 @@ public partial class ResultDataManagerViewModel : ObservableObject
 {
     private List<ResultRow> _rawResults = new();
 
-    [ObservableProperty]
-    private ObservableCollection<ResultRow> visibleResults = new();
+    public ObservableCollection<ResultRow> VisibleResults { get; } = new();
     public ObservableCollection<string> AllUnits { get; } = new();
     public ObservableCollection<string> SelectedUnits { get; } = new();
 
@@ -46,7 +45,7 @@ public partial class ResultDataManagerViewModel : ObservableObject
             var parts = line.Split(',');
             if (parts.Length < 8) continue;
 
-            var row = new ResultRow
+            _rawResults.Add(new ResultRow
             {
                 Timestamp = DateTime.Parse(parts[0], CultureInfo.InvariantCulture),
                 UnitName = parts[1],
@@ -56,13 +55,10 @@ public partial class ResultDataManagerViewModel : ObservableObject
                 Electricity = double.Parse(parts[5], CultureInfo.InvariantCulture),
                 CO2 = double.Parse(parts[6], CultureInfo.InvariantCulture),
                 PrimaryEnergy = double.Parse(parts[7], CultureInfo.InvariantCulture)
-            };
-
-            _rawResults.Add(row);
+            });
         }
 
-        var unitNames = _rawResults.Select(r => r.UnitName).Distinct();
-        foreach (var unit in unitNames)
+        foreach (var unit in _rawResults.Select(r => r.UnitName).Distinct())
         {
             AllUnits.Add(unit);
             SelectedUnits.Add(unit);
@@ -71,23 +67,25 @@ public partial class ResultDataManagerViewModel : ObservableObject
         ApplyFilter();
     }
 
-    public void ToggleUnit(string unitName)
+    public void ToggleUnit(string unit)
     {
-        if (SelectedUnits.Contains(unitName))
-            SelectedUnits.Remove(unitName);
+        if (SelectedUnits.Contains(unit))
+            SelectedUnits.Remove(unit);
         else
-            SelectedUnits.Add(unitName);
+            SelectedUnits.Add(unit);
 
         ApplyFilter();
     }
 
     private void ApplyFilter()
     {
-        var filtered = _rawResults
-            .Where(r => SelectedUnits.Contains(r.UnitName))
-            .ToList();
+        VisibleResults.Clear();
 
-        VisibleResults = new ObservableCollection<ResultRow>(filtered);
+        foreach (var row in _rawResults)
+        {
+            if (SelectedUnits.Contains(row.UnitName))
+                VisibleResults.Add(row);
+        }
     }
 
     public class ResultRow
